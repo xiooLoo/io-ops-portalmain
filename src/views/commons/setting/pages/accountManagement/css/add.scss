@@ -1,0 +1,129 @@
+// 新增编辑
+.accountManagementAdd {
+  height: 100%;
+  background: $yxt-color-bg-1;
+  height: calc(100% - 40px);
+
+  .page-header-tip {
+    width: 100%;
+    z-index: 998;
+    position: inherit;
+    top: 88px;
+  }
+
+  .accountManagementAdd-bottom {
+    overflow-y: auto;
+    height: calc(100% - 88px);
+    margin: 24px 24px 0;
+    background: $yxt-color-white-1;
+
+    p {
+      font-size: $yxt-font-size-title-1;
+      font-family: YaheiA;
+      font-weight: bold;
+      color: $yxt-color-dark-3;
+      line-height: 48px;
+      border-bottom: 1px solid $yxt-color-border-1;
+      padding-left: 27px;
+    }
+
+    .accountManagementAdd-bottom-form {
+      width: 40%;
+      margin: 0 auto;
+      min-width: 556px;
+      display: flex;
+      justify-content: center;
+
+      .to-select {
+        width: 100%;
+      }
+
+      .to-cascader {
+        width: 100%;
+      }
+    }
+  }
+
+  .clearFloat {
+    clear: both;
+  }
+
+  //选择弹窗
+  .to-drawer__body {
+    .drawer-box {
+      display: block;
+
+      .drawer-box-top {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 24px;
+        border-bottom: 1px solid $yxt-color-border-1;
+
+        p:nth-child(1) {
+          font-weight: bold;
+          color: $yxt-color-text-1;
+          font-family: YaheiA;
+        }
+
+        p:nth-child(2) {
+          cursor: pointer;
+        }
+      }
+
+      .drawer-center {
+        margin: 24px;
+        height: 91vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      .OrderDetails-btn-box {
+        border-top: 1px solid $yxt-color-border-1;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 8px;
+        padding-right: 24px;
+      }
+    }
+  }
+
+  //表单
+  .demo-ruleForm {
+    margin-top: 36px;
+    width: 100%;
+
+    .roleAuthorization {
+      cursor: pointer;
+    }
+
+    .form_columns {
+      float: left;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      width: calc(45% - 8px);
+      margin-left: 8px;
+
+      .to-form-item__content {
+        margin-left: 0 !important;
+      }
+    }
+
+    .form_column {
+      float: left;
+      margin-top: 0 !important;
+      width: 55%;
+    }
+
+    .form_tip {
+      clear: both;
+    }
+
+    .to-form-item {
+      margin-bottom: 16px;
+    }
+  }
+
+  .accountManagementAdd-btn {
+    margin-bottom: 108px;
+  }
+}

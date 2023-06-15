@@ -1,0 +1,29 @@
+// 预置主题库
+.theme-default {
+  @import "./themes/theme-default.scss";
+}
+.theme-green {
+  @import "./themes/theme-green.scss";
+}
+.theme-red {
+  @import "./themes/theme-red.scss";
+}
+
+
+
+// 预置字体库
+@font-face {
+  font-family: "puHuiTi";
+  src: url("../assets/ttfs/puHuiTi.ttf") format("truetype");
+}
+.puHuiTi {
+  font-family: "puHuiTi", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@font-face {
+  font-family: "zcool";
+  src: url("../assets/ttfs/zcool.ttf") format("truetype");
+}
+.zcool {
+  font-family: "zcool", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}

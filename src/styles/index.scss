@@ -1,0 +1,172 @@
+@import './indexThemes.scss';
+@import './updateScrollerBar.scss';
+
+body {
+  height: 100%;
+  font-size: 10px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  
+}
+
+html {
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+  font-size: 1.6em;
+  @include background_color('background_color');
+  @include text_color('text_color')
+}
+
+.icon {
+  width: 1.6em;
+  height: 1.6em;
+  vertical-align: middle;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a,
+a:focus,
+a:hover {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+label {
+  font-weight: 700;
+}
+
+.app-container {
+  padding: 15px;
+  height: calc(100vh - 96px);
+  overflow-y: auto;
+  z-index: 0;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  padding: 20px 0 0px 0;
+  justify-content: flex-end;
+}
+
+.components-container {
+  margin: 30px 50px;
+  position: relative;
+}
+
+// Refine element ui upload
+.upload-container {
+  .to-upload {
+    width: 100%;
+
+    .to-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+aside {
+  background: #eef1f6;
+  color: #2c3e50;
+  padding: 8px 24px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  display: block;
+  line-height: 32px;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  a {
+    color: #337ab7;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(32, 160, 255);
+    }
+  }
+}
+
+.filter-container {
+  padding-bottom: 10px;
+
+  .filter-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+}
+
+.link-type,
+.link-type:focus {
+  color: #337ab7;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(32, 160, 255);
+  }
+}
+
+.status-col {
+  .cell {
+    padding: 0 10px;
+    text-align: center;
+  }
+}
+
+.text-center {
+  text-align: center
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.to-loading-spinner .circular{
+  width: 42px;
+  height: 42px;
+  animation: loading-rotate 2s linear infinite;
+  display: none;
+}
+.to-loading-spinner{
+  background: url(../assets/gifs/loading.gif) no-repeat;
+  background-size: 100px 100px;
+  width: 100px !important;
+  height: 100px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px !important;
+  margin-left: -100px;
+}
+
+.global-yxt-dialog-content {
+  padding: 0 32px;
+}

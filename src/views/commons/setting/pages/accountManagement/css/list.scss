@@ -1,0 +1,131 @@
+.accountManagement-box {
+  height: calc(100% - 50px);
+  overflow-y: auto;
+
+  ::v-deep .to-drawer__body {
+    overflow-y: auto;
+  }
+
+  //顶部搜索
+  .top-serch {
+    background: $yxt-color-white-1;
+    padding: 16px 24px;
+  }
+
+  .accountManagement-box-search-text {
+    p {
+      display: flex;
+      align-items: center;
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .search-text {
+        flex: 1;
+        font-size: $yxt-font-size-body-2;
+      }
+
+      .search-title {
+        white-space: nowrap;
+      }
+
+      .search-two-title {
+        padding-left: 10px;
+      }
+
+    }
+  }
+
+  .accountManagement-box-search-btn {
+    margin-right: 10px;
+  }
+
+  .accountManagement-box-btn {
+    background: $yxt-color-white-1;
+    padding: 0 24px 16px 24px;
+    display: flex;
+
+    .resetCalss {
+      position: relative;
+      margin-left: 10px;
+
+      p {
+        text-align: center;
+        line-height: 34px;
+      }
+
+      .moreClass {
+        position: absolute;
+        width: 78px;
+        border-radius: 4px;
+        z-index: 1;
+      }
+    }
+
+    .is-disabled {
+      display: inline-block;
+      height: 32px;
+      line-height: 0px;
+      font-size: $yxt-font-size-body-2;
+      background-color: $yxt-color-white-1;
+      color: #C0C4CC;
+      border: none;
+    }
+  }
+
+  .PublicTable-box {
+    margin: 24px 24px 0 24px;
+
+    .changeAccount-box {
+      margin-top: 2px;
+    }
+  }
+
+  //弹窗详情
+  .accountManagement-details-box {
+    margin-top: -36px;
+
+    p {
+      margin-top: 12px;
+      margin-bottom: 8px;
+    }
+
+    .accountManagement-details-box-table {
+      display: flex;
+      font-size: $yxt-font-size-title-1;
+      line-height: 20px;
+
+      table {
+        flex: 1;
+        width: 100%;
+        text-align: center;
+        border: 1px solid $yxt-color-border-1;
+        border-collapse: collapse;
+
+        th {
+          width: 70%;
+          padding: 8px 0;
+          border: 1px solid $yxt-color-border-1;
+        }
+
+        td {
+          width: 30%;
+          color: $yxt-color-border-1;
+          border: 1px solid $yxt-color-border-1;
+        }
+      }
+
+      .right-table {
+        margin-left: -1px;
+      }
+    }
+  }
+}
+
+.my-cell-class-name {
+  color: $yxt-color-primary-8;
+  cursor: pointer;
+}

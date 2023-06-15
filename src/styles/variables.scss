@@ -1,0 +1,21 @@
+$sideBarWidth: 210px;
+$subMenuBg:#fff;
+$subMenuHover:#001528;
+$subMenuActiveText:#f4f4f5;
+$menuBg:#fff;
+$menuText:rgba(133, 141, 150,1);
+$menuActiveText: $yxt-color-primary-8;
+$navbarH: 60px;
+$menuH: 44px;
+$tagTabH: $menuH;
+
+// 主色调
+$mainColor: $yxt-color-white-1;
+$subColor: $yxt-color-primary-3;
+
+:export {
+  menuBg: $menuBg;
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  sideBarWidth: $sideBarWidth;
+}

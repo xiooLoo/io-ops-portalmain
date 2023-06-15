@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@import '../themesio/io-token-light-vars.scss';
+
+// 基础底色
+$yxt-color-transparent: transparent;
+$yxt-color-white: $yxt-color-white-1;
+$yxt-color-dark: $yxt-color-dark-1;
+// 主色
+$yxt-color-primary-oo: $yxt-color-success-8;
+$yxt-color-primary-p7: $yxt-color-success-7;
+$yxt-color-primary-p6: $yxt-color-success-6;
+$yxt-color-primary-p5: $yxt-color-success-5;
+$yxt-color-primary-p4: $yxt-color-success-4;
+$yxt-color-primary-p3: $yxt-color-success-3;
+$yxt-color-primary-p2: $yxt-color-success-2;
+$yxt-color-primary-p1: $yxt-color-success-1;
+// 边框色
+$yxt-color-border: $yxt-color-border-1;
+// 背景色
+$yxt-color-bg: $yxt-color-bg-1; // 基础色-白
+$yxt-color-bg-primary-sub: $yxt-color-bg-9; // 主色(农业绿)-2级色
+$yxt-color-bg-green-1: $yxt-color-success-2; // 绿色-2级色
+$yxt-color-bg-gold-1: $yxt-color-bg-8; // 金色-2级色
+$yxt-color-bg-red-1: $yxt-color-danger-2; // 红色-2级色
+$yxt-color-bg-grey-weak: $yxt-color-fill-6; // 浅灰-B8BCC4
+$yxt-color-bg-grey-deep: $yxt-color-text-2; // 深灰-5A6275
+$yxt-color-bg-grey-deep2x: $yxt-color-text-1; // 强调深-2B364E
+$yxt-color-bg-grey-disabled: $yxt-color-text-4; // 置灰-禁用-B8BCC4
+// 字体色
+$yxt-color-text-grey-weak: $yxt-color-text-6;
+$yxt-color-text-grey-deep: $yxt-color-text-3;
+$yxt-color-text-grey-deep2x: $yxt-color-text-2;
+$yxt-color-text-grey-deep3x: $yxt-color-text-1;
+// 滚动条色
+$yxt-color-scrollbar-thumb: $yxt-color-fill-6;
+// 警告色
+$yxt-color-danger-deep: $yxt-color-danger-9;
+$yxt-color-danger-normal: $yxt-color-danger-7;
+$yxt-color-danger-disabled: $yxt-color-danger-5;
+$yxt-color-danger-weak: $yxt-color-danger-3;
+// 成功色
+$yxt-color-success-deep: $yxt-color-success-9;
+$yxt-color-success-normal: $yxt-color-success-7;
+$yxt-color-success-disabled: $yxt-color-success-5;
+$yxt-color-success-weak: $yxt-color-success-4;
+// 金色
+$yxt-color-warning-deep: $yxt-color-warning-9;
+$yxt-color-warning-normal: $yxt-color-warning-7;
+$yxt-color-warning-disabled: $yxt-color-warning-5;
+$yxt-color-warning-weak: $yxt-color-warning-4;
+
+/*************************************
+            yxt-ui样式
+*************************************/
+.active-tab,
+.card-perfix-border {
+  color: $yxt-color-primary-oo !important;
+
+  // 或使用以下mixin的方式，通过主题风格自定义样式
+  // @include theme_text_color('theme_text_color');
+}
+
+.card-perfix-border {
+  border-color: $yxt-color-primary-oo !important;
+}
+
+.yxt-header-image-box {
+  background-image: url("https://pic.imgdb.cn/item/642a6df4a682492fcc01f3cb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.float-icon-clazz {
+  color: $yxt-color-primary-oo;
+}
+
+.tab-li {
+  color: $yxt-color-text-grey-deep;
+  background-color: $yxt-color-bg;
+
+  &.is-active,
+  &:hover {
+    transition: all 0.3s linear;
+    background-color: $yxt-color-bg-primary-sub;
+    color: $yxt-color-primary-oo;
+  }
+}
+
+.actived-border-i {
+  border: 1px dashed $yxt-color-primary-oo;
+}
+
+@import './base.scss';

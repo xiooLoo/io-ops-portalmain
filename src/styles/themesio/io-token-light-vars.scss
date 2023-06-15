@@ -1,0 +1,377 @@
+/** Light 亮色Token **/
+/**
+ * Design Token 规约
+ * 
+ * 1. 第一部分（基础私有Token），😡Token禁止在外部引用！！！；
+ * 2. 第二部分（基础共享Token），😃Token可在外部引用；
+ * 3. 第三部分（主题私有Token），😡Token禁止在外部引用！！！；
+ * 4. 第四分部（主题共享Token），😃Token可在外部引用，如果变量粒度不够可扩充，扩充后的变量必须同步Light、Dark文件，无缝切换风格；
+ * 5. 全系统【色值】应用必须在此Light || Dark文件中获取，这样才能保证基于YXTUI组件库开发的项目，无缝切换主题；
+ */
+
+/**
+ 备注1：HEXA透明度对照表
+ * 00%=FF（不透明）
+ * 5%=F2     10%=E5    15%=D8    
+ * 20%=CC    25%=BF    30%=B2    
+ * 35%=A5    40%=99    45%=8c    
+ * 50%=7F    55%=72    60%=66    
+ * 65%=59    70%=4c    75%=3F    
+ * 80%=33    85%=21    90%=19    
+ * 95%=0c    100%=00（全透明）
+ 
+ 备注2：字体大小 em / px 计算规则
+ * <body>标签设置font-size: 10px情况下，使用em
+ * 1em = 16px  
+ */
+
+/* ------------------------------------------------
+🥝第一部分：基础私有Token （😡Token禁止在外部引用！！！）
+-------------------------------------------------*/
+$--yxt-color-white: #FFFFFF;
+$--yxt-color-white-2: #F2F5F9;
+$--yxt-color-dark: #000000;
+$--yxt-color-dark-2: #0000007F;
+$--yxt-color-dark-3: #303133;
+// 字体大小
+$--yxt-font-size-em-6: 0.375em;
+$--yxt-font-size-em-7: 0.438em;
+$--yxt-font-size-em-8: 0.5em;
+$--yxt-font-size-em-9: 0.563em;
+$--yxt-font-size-em-10: 0.625em;
+$--yxt-font-size-em-11: 0.688em;
+$--yxt-font-size-em-12: 0.75em;
+$--yxt-font-size-em-13: 0.813em;
+$--yxt-font-size-em-14: 0.875em;
+$--yxt-font-size-em-15: 0.938em;
+$--yxt-font-size-em-16: 1em;
+$--yxt-font-size-em-17: 1.063em;
+$--yxt-font-size-em-18: 1.125em;
+$--yxt-font-size-em-19: 1.188em;
+$--yxt-font-size-em-20: 1.25em;
+$--yxt-font-size-em-21: 1.313em;
+$--yxt-font-size-em-22: 1.375em;
+$--yxt-font-size-em-23: 1.438em;
+$--yxt-font-size-em-24: 1.5em;
+$--yxt-font-size-em-26: 1.6em;
+$--yxt-font-size-em-30: 1.8em;
+$--yxt-font-size-em-32: 2em;
+$--yxt-font-size-em-36: 2.25em;
+$--yxt-font-size-em-48: 3em;
+$--yxt-font-size-em-56: 3.5em;
+$--yxt-font-size-em-70: 4.38em;
+// px
+$--yxt-font-size-px-6: 6px;
+$--yxt-font-size-px-7: 7px;
+$--yxt-font-size-px-8: 8px;
+$--yxt-font-size-px-9: 9px;
+$--yxt-font-size-px-10: 10px;
+$--yxt-font-size-px-11: 11px;
+$--yxt-font-size-px-12: 12px;
+$--yxt-font-size-px-13: 13px;
+$--yxt-font-size-px-14: 14px;
+$--yxt-font-size-px-15: 15px;
+$--yxt-font-size-px-16: 16px;
+$--yxt-font-size-px-17: 17px;
+$--yxt-font-size-px-18: 18px;
+$--yxt-font-size-px-19: 19px;
+$--yxt-font-size-px-20: 20px;
+$--yxt-font-size-px-21: 21px;
+$--yxt-font-size-px-22: 22px;
+$--yxt-font-size-px-23: 23px;
+$--yxt-font-size-px-24: 24px;
+$--yxt-font-size-px-26: 26px;
+$--yxt-font-size-px-30: 30px;
+$--yxt-font-size-px-32: 32px;
+$--yxt-font-size-px-36: 36px;
+$--yxt-font-size-px-48: 48px;
+$--yxt-font-size-px-56: 56px;
+$--yxt-font-size-px-70: 70px;
+
+/* ------------------------------------------------
+🥝第二部分：基础共享Token （此部分Light、Dark主题通用） （😃Token可在外部引用）
+--------------------------------------------------*/
+// 字重
+$yxt-font-weight-100: 100;  /*极细*/
+$yxt-font-weight-200: 200;  /*纤细*/
+$yxt-font-weight-300: 300;  /*细体*/
+$yxt-font-weight-400: 400;  /*常规*/
+$yxt-font-weight-500: 500;  /*中等（加粗）*/
+$yxt-font-weight-600: 600;  /*半粗*/
+$yxt-font-weight-700: 700;  /*粗体*/
+// 尺寸
+$yxt-size-1: 4px;
+$yxt-size-2: 8px;
+$yxt-size-3: 12px;
+$yxt-size-4: 16px;
+$yxt-size-5: 20px;
+$yxt-size-6: 24px;
+$yxt-size-8: 32px;
+$yxt-size-10: 40px;
+$yxt-size-N: calc(4 * 11) px; /*对应的值为(4 * N)px*/
+$yxt-size-50: 200px;
+// 字体大小（em/px）
+$yxt-font-size-body-1: $--yxt-font-size-px-12;
+$yxt-font-size-body-2: $--yxt-font-size-px-14;
+$yxt-font-size-title-1: $--yxt-font-size-px-16;
+$yxt-font-size-title-1x: $--yxt-font-size-px-18;
+$yxt-font-size-title-2: $--yxt-font-size-px-20;
+$yxt-font-size-title-3: $--yxt-font-size-px-24;
+// 组件尺寸
+$yxt-com-size-mini: $yxt-size-6;  /*小（24px）*/
+$yxt-com-size-default: $yxt-size-8; /*中（32px）*/
+$yxt-com-size-large: $yxt-size-10;  /*大（40px）*/
+// 边框宽度
+$yxt-border-none: 0;  /*无边框*/
+$yxt-border-1: 1px; /*常规*/
+$yxt-border-2: 2px; /*较粗*/
+$yxt-border-3: 3px; /*粗*/
+// 边框圆角
+$yxt-border-radius-none: 0; /*直角*/
+$yxt-border-radius-small: 2px;  /*圆角-常规*/
+$yxt-border-radius-medium: 4px; /*圆角-中等*/
+$yxt-border-radius-large: 8px;  /*圆角-较大*/
+$yxt-border-radius-circle: 50%; /*圆角-全圆角*/
+
+/* ------------------------------------------------
+🥝第三部分：主题私有Token （😡Token禁止在外部引用！！！）
+-------------------------------------------------*/
+/* 红色 */
+$--yxt-color-red-light-10: #93161A;
+$--yxt-color-red-light-9: #C41D23;
+$--yxt-color-red-light-8: #F5242C;
+$--yxt-color-red-light-7: #F63941;
+$--yxt-color-red-light-6: #F8656B;
+$--yxt-color-red-light-5: #FA9194;
+$--yxt-color-red-light-4: #FCBDBF;
+$--yxt-color-red-light-3: #FEDDE0;
+$--yxt-color-red-light-2: #FFEEEF;
+$--yxt-color-red-light-1: #FEF8F8;
+/* 橘色 */
+$--yxt-color-orange-light-10: #993515;
+$--yxt-color-orange-light-9: #CC471C;
+$--yxt-color-orange-light-8: #FF5923;
+$--yxt-color-orange-light-7: #FD6A39;
+$--yxt-color-orange-light-6: #FF8964;
+$--yxt-color-orange-light-5: #FFAC91;
+$--yxt-color-orange-light-4: #FFCDBD;
+$--yxt-color-orange-light-3: #FEE6DE;
+$--yxt-color-orange-light-2: #FFF3EE;
+$--yxt-color-orange-light-1: #FFFAF8;
+/* 橙汁色 */
+$--yxt-color-oj-light-10: #96590B;
+$--yxt-color-oj-light-9: #C87710;
+$--yxt-color-oj-light-8: #FB9517;
+$--yxt-color-oj-light-7: #FAA83E;
+$--yxt-color-oj-light-6: #FAB559;
+$--yxt-color-oj-light-5: #FCC889;
+$--yxt-color-oj-light-4: #FEDEB8;
+$--yxt-color-oj-light-3: #FFF0DC;
+$--yxt-color-oj-light-2: #FFF7ED;
+$--yxt-color-oj-light-1: #FCFBF8;
+/* 金色 */
+$--yxt-color-gold-light-10: #94781C;
+$--yxt-color-gold-light-9: #C5A026;
+$--yxt-color-gold-light-8: #F6C82F;
+$--yxt-color-gold-light-7: #F6CD42;
+$--yxt-color-gold-light-6: #F7D86C;
+$--yxt-color-gold-light-5: #FAE397;
+$--yxt-color-gold-light-4: #FDEEC0;
+$--yxt-color-gold-light-3: #FEF7DF;
+$--yxt-color-gold-light-2: #FEFBEF;
+$--yxt-color-gold-light-1: #FEFDF7;
+/* 亮绿色 */
+$--yxt-color-green-light-10: #32760F;
+$--yxt-color-green-light-9: #429D14;
+$--yxt-color-green-light-8: #53C419;
+$--yxt-color-green-light-7: #64C92E;
+$--yxt-color-green-light-6: #86D45D;
+$--yxt-color-green-light-5: #A9E18B;
+$--yxt-color-green-light-4: #CBECBC;
+$--yxt-color-green-light-3: #E4F7DD;
+$--yxt-color-green-light-2: #F2FBED;
+$--yxt-color-green-light-1: #F8FDF8;
+/* 农业绿 */
+$--yxt-color-aggreen-light-10: #16693A;
+$--yxt-color-aggreen-light-9: #1E8C4D;
+$--yxt-color-aggreen-light-8: #25AF60;
+$--yxt-color-aggreen-light-7: #4EBE7F;
+$--yxt-color-aggreen-light-6: #66C78F;
+$--yxt-color-aggreen-light-5: #92D7AF;
+$--yxt-color-aggreen-light-4: #BDE6CF;
+$--yxt-color-aggreen-light-3: #DFF3E7;
+$--yxt-color-aggreen-light-2: #EEF9F3;
+$--yxt-color-aggreen-light-1: #F8FDFA;
+/* 青色 */
+$--yxt-color-cyan-light-10: #006557;
+$--yxt-color-cyan-light-9: #008774;
+$--yxt-color-cyan-light-8: #00A991;
+$--yxt-color-cyan-light-7: #32B9A4;
+$--yxt-color-cyan-light-6: #4AC2B2;
+$--yxt-color-cyan-light-5: #7FD3C8;
+$--yxt-color-cyan-light-4: #B2E3DE;
+$--yxt-color-cyan-light-3: #D8F3EE;
+$--yxt-color-cyan-light-2: #EBFAF6;
+$--yxt-color-cyan-light-1: #F7FCFC;
+/* 水利蓝 */
+$--yxt-color-waterBlue-light-10: #015F94;
+$--yxt-color-waterBlue-light-9: #017EC6;
+$--yxt-color-waterBlue-light-8: #019EF7;
+$--yxt-color-waterBlue-light-7: #1DA6F7;
+$--yxt-color-waterBlue-light-6: #4FBBF9;
+$--yxt-color-waterBlue-light-5: #80CDFC;
+$--yxt-color-waterBlue-light-4: #B2E1FC;
+$--yxt-color-waterBlue-light-3: #DBF1FF;
+$--yxt-color-waterBlue-light-2: #EBF8FF;
+$--yxt-color-waterBlue-light-1: #F7FCFE;
+/* 科技蓝 */
+$--yxt-color-sciBlue-light-10: #37458B;
+$--yxt-color-sciBlue-light-9: #495CB9;
+$--yxt-color-sciBlue-light-8: #5B73E7;
+$--yxt-color-sciBlue-light-7: #6B81E9;
+$--yxt-color-sciBlue-light-6: #8C9CEE;
+$--yxt-color-sciBlue-light-5: #ADB9F3;
+$--yxt-color-sciBlue-light-4: #CCD4F7;
+$--yxt-color-sciBlue-light-3: #E6EAFC;
+$--yxt-color-sciBlue-light-2: #F2F4FD;
+$--yxt-color-sciBlue-light-1: #FAFAFE;
+/* 紫色 */
+$--yxt-color-purple-light-10: #453E90;
+$--yxt-color-purple-light-9: #5C52C0;
+$--yxt-color-purple-light-8: #7367F0;
+$--yxt-color-purple-light-7: #8176F2;
+$--yxt-color-purple-light-6: #9D94F4;
+$--yxt-color-purple-light-5: #BAB3F7;
+$--yxt-color-purple-light-4: #D5D0FA;
+$--yxt-color-purple-light-3: #E9E8FD;
+$--yxt-color-purple-light-2: #F4F3FE;
+$--yxt-color-purple-light-1: #FAFAFD;
+/* 大后勤蓝 */
+$--yxt-color-gilBlue-light-10: #1C4899;
+$--yxt-color-gilBlue-light-9: #2560CC;
+$--yxt-color-gilBlue-light-8: #2E78FF;
+$--yxt-color-gilBlue-light-7: #4285FF;
+$--yxt-color-gilBlue-light-6: #6CA0FF;
+$--yxt-color-gilBlue-light-5: #96BBFF;
+$--yxt-color-gilBlue-light-4: #C0D6FF;
+$--yxt-color-gilBlue-light-3: #E0EBFF;
+$--yxt-color-gilBlue-light-2: #EFF5FF;
+$--yxt-color-gilBlue-light-1: #F7FAFF;
+/* 灰色 */
+$--yxt-color-grey-light-11: #FAFBFB;
+$--yxt-color-grey-light-10: #F8F8F9;
+$--yxt-color-grey-light-9: #F6F6F7;
+$--yxt-color-grey-light-8: #F1F2F4;
+$--yxt-color-grey-light-7: #EDEEF0;
+$--yxt-color-grey-light-6: #DCDEE2;
+$--yxt-color-grey-light-5: #B8BCC4;
+$--yxt-color-grey-light-4: #898F9D;
+$--yxt-color-grey-light-3: #5A6275;
+$--yxt-color-grey-light-2: #2B364E;
+$--yxt-color-grey-light-1: #14203B;
+
+
+/*------------------------------------------------
+🥝第四部分：主题共享Token （😃Token可在外部引用）
+-------------------------------------------------*/
+// 阴影
+$yxt-shadow-special: 0px 3px 6px -4px rgba(0, 0, 0, 0.12), 0px 6px 16px 0px rgba(0, 0, 0, 0.08), 0px 9px 28px 8px rgba(0, 0, 0, 0.05); /*特殊阴影-文字提示阴影*/
+$yxt-shadow-center-1: 0px 6px 16px -8px rgba(0, 0, 0, 0.08), 0px 9px 28px 0px rgba(0, 0, 0, 0.05), 0px 12px 48px 16px rgba(0, 0, 0, 0.03);  /*阴影样式1-模态弹窗 例如对话框、抽屉*/
+$yxt-shadow-center-2: 0px 3px 6px -4px rgba(0, 0, 0, 0.12), 0px 6px 16px 0px rgba(0, 0, 0, 0.08), 0px 9px 28px 8px rgba(0, 0, 0, 0.05); /*阴影样式2-非模态弹窗 例如全局提示、通知提醒框、组件背板*/
+$yxt-shadow-center-3: 0px 3px 3px -4px rgba(50, 50, 93, 0.25), 0px 6px 10px 0px rgba(0, 0, 0, 0.3), 0px 6px 10px 8px rgba(0, 0, 0, 0.05); /*阴影样式3*/ 
+// 功能色
+$yxt-color-fuctional-gilBlue: $--yxt-color-gilBlue-light-8;
+$yxt-color-fuctional-green: $--yxt-color-green-light-8;
+$yxt-color-fuctional-oj: $--yxt-color-oj-light-8;
+$yxt-color-fuctional-red: $--yxt-color-red-light-8;
+$yxt-color-fuctional-grey: $--yxt-color-grey-light-5;
+// 主色
+$yxt-color-primary-10: $--yxt-color-gilBlue-light-10;
+$yxt-color-primary-9: $--yxt-color-gilBlue-light-9; /*主色激活*/
+$yxt-color-primary-8: $--yxt-color-gilBlue-light-8; /*主色常规*/
+$yxt-color-primary-7: $--yxt-color-gilBlue-light-7; /*主色悬浮*/
+$yxt-color-primary-6: $--yxt-color-gilBlue-light-6;
+$yxt-color-primary-5: $--yxt-color-gilBlue-light-5;
+$yxt-color-primary-4: $--yxt-color-gilBlue-light-4; /*主色禁用*/
+$yxt-color-primary-3: $--yxt-color-gilBlue-light-3; /*主色背景*/
+$yxt-color-primary-2: $--yxt-color-gilBlue-light-2;
+$yxt-color-primary-1: $--yxt-color-gilBlue-light-1;
+// 成功色
+$yxt-color-success-10: $--yxt-color-aggreen-light-10;
+$yxt-color-success-9: $--yxt-color-aggreen-light-9; /*成功色激活*/
+$yxt-color-success-8: $--yxt-color-aggreen-light-8; /*成功色常规*/
+$yxt-color-success-7: $--yxt-color-aggreen-light-7; /*成功色悬浮*/
+$yxt-color-success-6: $--yxt-color-aggreen-light-6;
+$yxt-color-success-5: $--yxt-color-aggreen-light-5;
+$yxt-color-success-4: $--yxt-color-aggreen-light-4; /*成功色禁用*/
+$yxt-color-success-3: $--yxt-color-aggreen-light-3; /*成功色背景*/
+$yxt-color-success-2: $--yxt-color-aggreen-light-2;
+$yxt-color-success-1: $--yxt-color-aggreen-light-1;
+// 警示色
+$yxt-color-warning-10: $--yxt-color-gold-light-10;
+$yxt-color-warning-9: $--yxt-color-gold-light-9;  /*警示色激活*/
+$yxt-color-warning-8: $--yxt-color-gold-light-8;  /*警示色常规*/
+$yxt-color-warning-7: $--yxt-color-gold-light-7;  /*警示色悬浮*/
+$yxt-color-warning-6: $--yxt-color-gold-light-6;
+$yxt-color-warning-5: $--yxt-color-gold-light-5;
+$yxt-color-warning-4: $--yxt-color-gold-light-4;  /*警示色禁用*/
+$yxt-color-warning-3: $--yxt-color-gold-light-3;  /*警示色背景*/
+$yxt-color-warning-2: $--yxt-color-gold-light-2;
+$yxt-color-warning-1: $--yxt-color-gold-light-1;
+// 错误色
+$yxt-color-danger-10: $--yxt-color-red-light-10;
+$yxt-color-danger-9: $--yxt-color-red-light-9;  /*错误色激活*/
+$yxt-color-danger-8: $--yxt-color-red-light-8;  /*错误色常规*/
+$yxt-color-danger-7: $--yxt-color-red-light-7;  /*错误色悬浮*/
+$yxt-color-danger-6: $--yxt-color-red-light-6;
+$yxt-color-danger-5: $--yxt-color-red-light-5;
+$yxt-color-danger-4: $--yxt-color-red-light-4;  /*错误色禁用*/
+$yxt-color-danger-3: $--yxt-color-red-light-3;  /*错误色背景*/
+$yxt-color-danger-2: $--yxt-color-red-light-2;
+$yxt-color-danger-1: $--yxt-color-red-light-1;
+// 链接色
+$yxt-color-link-10: $--yxt-color-gilBlue-light-10;
+$yxt-color-link-9: $--yxt-color-gilBlue-light-9;  /*链接色激活*/
+$yxt-color-link-8: $--yxt-color-gilBlue-light-8;  /*链接色常规*/
+$yxt-color-link-7: $--yxt-color-gilBlue-light-7;  /*链接色悬浮*/
+$yxt-color-link-6: $--yxt-color-gilBlue-light-6;
+$yxt-color-link-5: $--yxt-color-gilBlue-light-5;
+$yxt-color-link-4: $--yxt-color-gilBlue-light-4;  /*链接色禁用*/
+$yxt-color-link-3: $--yxt-color-gilBlue-light-3;
+$yxt-color-link-2: $--yxt-color-gilBlue-light-2;
+$yxt-color-link-1: $--yxt-color-gilBlue-light-1;
+// 边框颜色
+$yxt-color-border-3: $--yxt-color-grey-light-5; /*分割线-深色*/
+$yxt-color-border-2: $--yxt-color-grey-light-7; /*分割线-浅色1*/
+$yxt-color-border-1: $--yxt-color-grey-light-6; /*分割线-浅色2：输入框、选择框、表单、组件border*/
+// 填充颜色
+$yxt-color-fill-6: $--yxt-color-grey-light-5; /*【重】单/多选禁用、开关bg*/
+$yxt-color-fill-5: $--yxt-color-grey-light-6; /*【深】开关失效、头像bg*/
+$yxt-color-fill-4: $--yxt-color-grey-light-7; /*【次深】次级按钮禁用*/
+$yxt-color-fill-3: $--yxt-color-grey-light-8; /*【常规】分页器、tab标签页、次级按钮、滑动条bg*/
+$yxt-color-fill-2: $--yxt-color-grey-light-9; /*【浅】输入框禁用态、上传照片bg*/
+$yxt-color-fill-1: $--yxt-color-grey-light-10; /*【次浅】表头、组件bg、标签bg*/
+// 文字颜色
+$yxt-color-text-1: $--yxt-color-grey-light-2;  /*强调-标题*/
+$yxt-color-text-2: $--yxt-color-grey-light-3;  /*常规-正文*/
+$yxt-color-text-3: $--yxt-color-grey-light-4;  /*次要-提示*/
+$yxt-color-text-4: $--yxt-color-grey-light-5;  /*置灰-禁用*/
+$yxt-color-text-5: $--yxt-color-white;  /*纯白*/ 
+$yxt-color-text-6: $--yxt-color-grey-light-6;  /*其他*/
+// 背景颜色
+$yxt-color-bg-10: $--yxt-color-red-light-3; /*喜庆红背景*/
+$yxt-color-bg-9: $--yxt-color-aggreen-light-3; /*农业绿背景*/
+$yxt-color-bg-8: $--yxt-color-gold-light-3; /*金色背景*/
+$yxt-color-bg-7: $--yxt-color-sciBlue-light-3; /*科技蓝背景*/
+$yxt-color-bg-6: $--yxt-color-waterBlue-light-3; /*轻蓝色背景*/
+$yxt-color-bg-5: $--yxt-color-grey-light-2; /*黑色背景蒙层*/
+$yxt-color-bg-4: $--yxt-color-grey-light-1; /*黑色气泡提示*/
+$yxt-color-bg-3: $--yxt-color-white;  /*浮层背景*/
+$yxt-color-bg-2: $--yxt-color-white;  /*内容卡片*/
+$yxt-color-bg-1: $--yxt-color-white-2;  /*最底层布局背景*/
+// 基础色
+$yxt-color-white-1: $--yxt-color-white !default;  /*#FFFFFF*/
+$yxt-color-white-2: $--yxt-color-white-2;  /*#F2F5F9*/
+$yxt-color-dark-1: $--yxt-color-dark;   /*#000000*/
+$yxt-color-dark-2: $--yxt-color-dark-2;   /*#0000007F*/
+$yxt-color-dark-3: $--yxt-color-dark-3;   /*#303133*/

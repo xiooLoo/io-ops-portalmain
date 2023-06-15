@@ -1,0 +1,65 @@
+//详情
+.accountManagementDetail {
+  .accountManagementDetail-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $yxt-color-border-1;
+    padding: 0 24px;
+    height: 50px;
+
+    p {
+      margin: 10px 0;
+      font-weight: bold;
+      color: $yxt-color-text-1;
+    }
+
+    .clone-btn-box {
+      cursor: pointer;
+
+      i {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .accountManagementDetail-scoll {
+    height: 94vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .accountManagementDetail-center {
+    margin: 24px 0 10px 0px;
+
+    .accountManagementDetail-center-title {
+      border-bottom: 1px solid $yxt-color-border-1;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: $yxt-color-text-1;
+      padding-left: 24px;
+      margin: 10px 0;
+    }
+
+    .table-column {
+      padding-left: 24px;
+      line-height: 32px;
+      font-size: 14px;
+      display: inline-block;
+
+      tr {
+        td:nth-child(1) {
+          color: $yxt-color-dark-3;
+          margin-right: 20px;
+        }
+
+        td:nth-child(2) {
+          color: $yxt-color-dark-3;
+        }
+      }
+    }
+  }
+}
